@@ -6,16 +6,20 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { CardComponent } from './card/card.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatInputModule,
     RouterModule.forRoot([
       { path: '', component: CardComponent },
-    ])
+    ]),
+    BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,

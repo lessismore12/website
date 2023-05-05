@@ -10,8 +10,8 @@ export class ScryfallService {
 
   constructor() { }
 
-  getData() {
-    let url = 'https://api.scryfall.com/cards/named?fuzzy=jeleva'
+  getData(name: string) {
+    let url = 'https://api.scryfall.com/cards/named?fuzzy=' + name
     return this.httpClient.get(url)
   }
 
